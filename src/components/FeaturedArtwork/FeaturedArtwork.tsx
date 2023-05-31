@@ -7,18 +7,16 @@ import bestseller3 from "./../../assets/bestseller3.png";
 const BestSeller = () => {
   return (
     <div className={classes.bestSeller}>
-      <div className={classes.bestSellerContainer}>
-        <h4>People Also Buy</h4>
-        <div className={classes.imagesContainer}>
-          <img className={classes.bestSellerImage} src={bestseller1}></img>
-          <img className={classes.bestSellerImage} src={bestseller2}></img>
-          <img className={classes.bestSellerImage} src={bestseller3}></img>
-        </div>
-        <div className={classes.detailsContainer}>
-          <h4>Details</h4>
-          <p>Size: 1020 x 1020 pixel</p>
-          <p>Size: 15 mb</p>
-        </div>
+      <h4>People Also Buy</h4>
+      <div className={classes.imagesContainer}>
+        <img className={classes.bestSellerImage} src={bestseller1}></img>
+        <img className={classes.bestSellerImage} src={bestseller2}></img>
+        <img className={classes.bestSellerImage} src={bestseller3}></img>
+      </div>
+      <div className={classes.detailsContainer}>
+        <h4>Details</h4>
+        <p>Size: 1020 x 1020 pixel</p>
+        <p>Size: 15 mb</p>
       </div>
     </div>
   );
@@ -42,7 +40,7 @@ const FeaturedArtwork = () => {
           typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various
           fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock.
         </div>
-        <div className={classes.bestsellerContainer}>
+        <div className={classes.bestSellerContainer}>
           <BestSeller />
         </div>
       </div>

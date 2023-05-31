@@ -31,18 +31,22 @@
   flex-basis: 60%;
 }
 
-.bestsellerContainer {
-  flex-basis: 40%;
-  justify-content: flex-end;
-}
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.bestSeller {
+// ~
+.bestSellerContainer {
   display: flex;
   justify-content: flex-end;
+  text-align: right;
+  flex-direction: column;
+  flex-basis: 40%;
 }
 
 .bestSellerImage {
   width: 117px;
   height: 147px;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
