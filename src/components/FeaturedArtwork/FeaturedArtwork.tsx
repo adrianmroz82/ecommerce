@@ -1,5 +1,8 @@
 import classes from "./FeaturedArtwork.module.scss";
 import featured from "./../../assets/featured.png";
+import bestseller1 from "./../../assets/bestseller1.png";
+import bestseller2 from "./../../assets/bestseller2.png";
+import bestseller3 from "./../../assets/bestseller3.png";
 
 const BestSeller = () => {
   return (
@@ -7,7 +10,9 @@ const BestSeller = () => {
       <div className={classes.bestSellerContainer}>
         <h4>People Also Buy</h4>
         <div className={classes.imagesContainer}>
-          <img className={classes.bestSellerImage} src={}></img>
+          <img className={classes.bestSellerImage} src={bestseller1}></img>
+          <img className={classes.bestSellerImage} src={bestseller2}></img>
+          <img className={classes.bestSellerImage} src={bestseller3}></img>
         </div>
         <div className={classes.detailsContainer}>
           <h4>Details</h4>
