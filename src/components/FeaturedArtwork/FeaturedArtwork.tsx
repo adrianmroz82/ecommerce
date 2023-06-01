@@ -3,15 +3,16 @@ import featured from "./../../assets/featured.png";
 import bestseller1 from "./../../assets/bestseller1.png";
 import bestseller2 from "./../../assets/bestseller2.png";
 import bestseller3 from "./../../assets/bestseller3.png";
+import PhotoOfTheDay from "../PhotoOfTheDay/PhotoOfTheDay";
 
 const BestSeller = () => {
   return (
     <div className={classes.bestSeller}>
       <h4>People Also Buy</h4>
       <div className={classes.imagesContainer}>
-        <img className={classes.bestSellerImage} src={bestseller1}></img>
-        <img className={classes.bestSellerImage} src={bestseller2}></img>
-        <img className={classes.bestSellerImage} src={bestseller3}></img>
+        <img className={classes.bestSellerImage} src={bestseller1} />
+        <img className={classes.bestSellerImage} src={bestseller2} />
+        <img className={classes.bestSellerImage} src={bestseller3} />
       </div>
       <div className={classes.detailsContainer}>
         <h4>Details</h4>
@@ -29,7 +30,10 @@ const FeaturedArtwork = () => {
         <h2>Samurai King Resting</h2>
         <button>add to cart</button>
       </div>
-      <img className={classes.featuredImage} src={featured} alt="featured artwork" />
+      <div className={classes.imageContainer}>
+        <PhotoOfTheDay />
+        <img className={classes.featuredImage} src={featured} alt="featured artwork" />
+      </div>
       <div className={classes.mainContainer}>
         <div className={classes.descriptionContainer}>
           <h3>About the Samurai King Resting</h3>
