@@ -5,7 +5,7 @@
 .headerContainer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   h2 {
     font-weight: 700;
@@ -22,6 +22,7 @@
   width: 100%;
   height: 0;
   padding-bottom: 40%;
+  margin-bottom: 2rem;
 }
 
 .featuredImage {
@@ -40,6 +41,23 @@
 
 .descriptionContainer {
   flex-basis: 60%;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 22px;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+    color: #656565;
+    font-size: 22px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: #656565;
+    font-size: 18px;
+  }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,10 +72,28 @@
 .bestSellerImage {
   width: 117px;
   height: 147px;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
 }
 
 .rightContent {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.bestSeller {
+  h4 {
+    margin-bottom: 2rem;
+  }
+}
+
+.detailsContainer {
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
 }

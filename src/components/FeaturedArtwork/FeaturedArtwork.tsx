@@ -4,6 +4,7 @@ import bestseller1 from "./../../assets/bestseller1.png";
 import bestseller2 from "./../../assets/bestseller2.png";
 import bestseller3 from "./../../assets/bestseller3.png";
 import PhotoOfTheDay from "../PhotoOfTheDay/PhotoOfTheDay";
+import Button from "../Button/Button";
 
 const BestSeller = () => {
   return (
@@ -28,7 +29,7 @@ const FeaturedArtwork = () => {
     <div className={classes.container}>
       <div className={classes.headerContainer}>
         <h2>Samurai King Resting</h2>
-        <button>add to cart</button>
+        <Button text="Add to cart" variant="secondary" />
       </div>
       <div className={classes.imageContainer}>
         <PhotoOfTheDay />
@@ -38,11 +39,14 @@ const FeaturedArtwork = () => {
         <div className={classes.descriptionContainer}>
           <h3>About the Samurai King Resting</h3>
           <h4>Pets</h4>
-          So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely
-          scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type
-          specimen book.So how did the classical Latin become so incoherent? According to McClintock, a 15th century
-          typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various
-          fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock.
+          <p>
+            So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter
+            likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts
+            for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock, a
+            15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to
+            mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According
+            to McClintock.
+          </p>
         </div>
         <div className={classes.bestSellerContainer}>
           <BestSeller />
