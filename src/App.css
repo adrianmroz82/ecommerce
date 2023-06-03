@@ -1,6 +1,6 @@
 #root {
-  /* max-width: 1440px; */
-  /* margin: 0 auto; */
   padding: 2rem 4rem;
-  /* text-align: center; */
+  @media screen and (max-width: 768px) {
+    padding: 0rem 1rem;
+  }
 }

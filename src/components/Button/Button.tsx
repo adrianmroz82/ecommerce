@@ -1,9 +1,10 @@
 interface Props {
   text: string;
   variant: "primary" | "secondary";
+  fullWidth?: boolean;
 }
 
-const Button = ({ text, variant }: Props) => {
+const Button = ({ text, variant, fullWidth }: Props) => {
   return (
     <button
       style={{
@@ -13,6 +14,9 @@ const Button = ({ text, variant }: Props) => {
         cursor: "pointer",
         fontSize: "1rem",
         fontWeight: "bold",
+        width: fullWidth ? "100%" : "auto",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
       }}>
       {text}
     </button>
