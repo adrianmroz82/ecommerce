@@ -12,16 +12,21 @@ const CartPreview = () => {
       </div>
 
       <div className={classes.itemContainer}>
-        <div className={classes.itemName}>
-          <h4>Samurai King Resting</h4>
+        <div className={classes.left}>
+          <div className={classes.itemName}>
+            <h4>Samurai King Resting</h4>
+          </div>
+          <div className={classes.itemPrice}>
+            <p>$10000.00</p>
+          </div>
         </div>
-        <div className={classes.itemPrice}>
-          <h4>$10000.00</h4>
+        <div className={classes.right}>
+          <div className={classes.itemImageContainer}>
+            <img className={classes.itemImage} src={featured} alt="" />
+          </div>
         </div>
       </div>
-      <div className={classes.itemImageContainer}>
-        <img className={classes.itemImage} src={featured} alt="" />
-      </div>
+
       <div className={classes.divider}>
         <Divider height="thin" />
       </div>
