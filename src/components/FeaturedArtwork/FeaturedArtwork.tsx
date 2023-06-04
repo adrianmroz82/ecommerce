@@ -32,7 +32,6 @@ const FeaturedArtwork = () => {
         <h2>Samurai King Resting</h2>
         <Button text="Add to cart" variant="secondary" />
       </div>
-      <CartPreview />
       <div className={classes.imageContainer}>
         <PhotoOfTheDay />
         <img className={classes.featuredImage} src={featured} alt="featured artwork" />
