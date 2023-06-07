@@ -4,10 +4,18 @@ import classes from "./CartPreview.module.scss";
 import { ReactComponent as CloseIcon } from "./../../assets/close-icon.svg";
 import featured from "../../assets/featured.png";
 
-const CartPreview = () => {
+interface Props {
+  setCartActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CartPreview = ({ setCartActive }: Props) => {
+  const handleClose = () => {
+    setCartActive(false);
+  };
+
   return (
     <div className={classes.container}>
-      <div className={classes.closeIcon}>
+      <div className={classes.closeIcon} onClick={handleClose}>
         <CloseIcon />
       </div>
 
