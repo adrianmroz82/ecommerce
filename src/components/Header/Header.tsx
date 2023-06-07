@@ -26,7 +26,7 @@ const Header = () => {
         <Logo className={classes.logo} />
         <ShoppingCart onClick={handleCartClick} className={classes.shoppingCart} />
         <Chip />
-        {cartActive && <CartPreview />}
+        {cartActive && <CartPreview setCartActive={setCartActive} />}
       </div>
       <Divider />
     </>
