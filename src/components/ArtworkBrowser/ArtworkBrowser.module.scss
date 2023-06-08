@@ -1,0 +1,15 @@
+.browserContainer {
+  display: flex;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-basis: 80%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5rem;
+}
+
+.filterContainer {
+  flex-basis: 20%;
+}
