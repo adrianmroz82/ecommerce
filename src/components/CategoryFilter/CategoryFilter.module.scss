@@ -1,0 +1,49 @@
+.filterItem {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.checkbox {
+  display: none;
+
+  &:checked {
+    & + label::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 6px;
+      width: 3px;
+      height: 8px;
+      border: solid black;
+      border-width: 0 4px 4px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+  font-size: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+  }
+}

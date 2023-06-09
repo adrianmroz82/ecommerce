@@ -3,9 +3,8 @@ import featured from "./../../assets/featured.png";
 import bestseller1 from "./../../assets/bestseller1.png";
 import bestseller2 from "./../../assets/bestseller2.png";
 import bestseller3 from "./../../assets/bestseller3.png";
-import PhotoOfTheDay from "../PhotoOfTheDay/PhotoOfTheDay";
-import Button from "../Button/Button";
-import CartPreview from "../CartPreview/CartPreview";
+import { Button } from "../Button/Button";
+import { PhotoOfTheDay } from "../PhotoOfTheDay/PhotoOfTheDay";
 
 const BestSeller = () => {
   return (
@@ -25,7 +24,7 @@ const BestSeller = () => {
   );
 };
 
-const FeaturedArtwork = () => {
+export const FeaturedArtwork = () => {
   return (
     <div className={classes.container}>
       <div className={classes.headerContainer}>
@@ -56,5 +55,3 @@ const FeaturedArtwork = () => {
     </div>
   );
 };
-
-export default FeaturedArtwork;
