@@ -1,18 +1,18 @@
 import classes from "./Divider.module.scss";
 
 interface Props {
-  height?: "bold" | "thin";
+  variant?: "bold" | "thin";
+  style?: React.CSSProperties;
 }
 
-const Divider = ({ height }: Props) => {
+export const Divider = ({ variant, style }: Props) => {
   return (
     <hr
       style={{
-        height: height === "thin" ? "1px" : "4px",
+        height: variant === "thin" ? "1px" : "4px",
+        ...style,
       }}
       className={classes.divider}
     />
   );
 };
-
-export default Divider;
