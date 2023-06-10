@@ -1,5 +1,5 @@
-import Button from "../Button/Button";
-import Divider from "../Divider/Divider";
+import { Button } from "../Button/Button";
+import { Divider } from "../Divider/Divider";
 import classes from "./CartPreview.module.scss";
 import { ReactComponent as CloseIcon } from "./../../assets/close-icon.svg";
 import featured from "../../assets/featured.png";
@@ -8,7 +8,7 @@ interface Props {
   setCartActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CartPreview = ({ setCartActive }: Props) => {
+export const CartPreview = ({ setCartActive }: Props) => {
   const handleClose = () => {
     setCartActive(false);
   };
@@ -36,7 +36,7 @@ const CartPreview = ({ setCartActive }: Props) => {
       </div>
 
       <div className={classes.divider}>
-        <Divider height="thin" />
+        <Divider variant="thin" />
       </div>
       <div className={classes.button}>
         <Button text="Clear" variant="primary" fullWidth />
@@ -44,5 +44,3 @@ const CartPreview = ({ setCartActive }: Props) => {
     </div>
   );
 };
-
-export default CartPreview;
