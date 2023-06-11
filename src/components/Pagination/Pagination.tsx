@@ -1,13 +1,9 @@
-// export const Pagination = () => {
-//   return <div style={{}}>Pagination</div>;
-// };
-
 import { ReactComponent as ArrowLeft } from "../../assets/arrow-left.svg";
 import { ReactComponent as ArrowRight } from "../../assets/arrow-right.svg";
 
 export const Pagination = () => {
   const standard = "#B4B4B4";
-  const active = "#000000";
+
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <ArrowLeft style={{ marginRight: "1rem" }} />

@@ -1,6 +1,7 @@
 import { Filter } from "../CategoryFilter/CategoryFilter";
 import { Divider } from "../Divider/Divider";
 import { GalleryCard } from "../GalleryCard/GalleryCard";
+import { Pagination } from "../Pagination/Pagination";
 import classes from "./ArtworkBrowser.module.scss";
 
 const categoryFilterItems = ["People", "Premium", "Pets", "Food", "Landmarks", "Cities", "Nature"];
@@ -14,13 +15,23 @@ const renderCards = (num: number) => {
 
 export const ArtworkBrowser = () => {
   return (
-    <div className={classes.browserContainer}>
-      <div className={classes.filterContainer}>
-        <Filter items={categoryFilterItems} header="Category" />
-        <Divider style={{ margin: "1rem 0" }} variant="thin" />
-        <Filter items={priceFilterItems} header="Price range" />
+    <>
+      <div className={classes.browserContainer}>
+        <div className={classes.filterContainer}>
+          <Filter items={categoryFilterItems} header="Category" />
+          <Divider style={{ margin: "1rem 0" }} variant="thin" />
+          <Filter items={priceFilterItems} header="Price range" />
+        </div>
+        <div className={classes.cardsContainer}>
+          {renderCards(6)}
+          <div
+            style={{
+              margin: "0 auto",
+            }}>
+            <Pagination />
+          </div>
+        </div>
       </div>
-      <div className={classes.cardsContainer}>{renderCards(6)}</div>
-    </div>
+    </>
   );
 };
