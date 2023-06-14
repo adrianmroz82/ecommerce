@@ -4,6 +4,27 @@ import { GalleryCard } from "../GalleryCard/GalleryCard";
 import { Pagination } from "../Pagination/Pagination";
 import classes from "./ArtworkBrowser.module.scss";
 
+// TODO: GENERIC BREADCRUMBS COMPONENT
+
+const Sort = () => {
+  return (
+    <div className={classes.sort}>
+      <span className={classes.sortText}>Sort by</span>
+      <span className={classes.price}>Price</span>
+    </div>
+  );
+};
+
+const BreadCrumbs = () => {
+  return (
+    <div className={classes.breadCrumbs}>
+      <span>Photography</span>
+      <span className={classes.arrow}> / </span>
+      Premium Photos
+    </div>
+  );
+};
+
 const categoryFilterItems = ["People", "Premium", "Pets", "Food", "Landmarks", "Cities", "Nature"];
 const priceFilterItems = ["Lower than $20", "$20 - $100", "$100 - $200", "More than $200"];
 
@@ -16,6 +37,17 @@ const renderCards = (num: number) => {
 export const ArtworkBrowser = () => {
   return (
     <>
+      <Divider />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: "3rem 0",
+        }}
+        className={classes.headerContainer}>
+        <BreadCrumbs />
+        <Sort />
+      </div>
       <div className={classes.browserContainer}>
         <div className={classes.filterContainer}>
           <Filter items={categoryFilterItems} header="Category" />
