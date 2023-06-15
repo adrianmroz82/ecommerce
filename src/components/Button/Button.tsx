@@ -3,11 +3,11 @@ import { MouseEvent } from "react";
 
 interface Props {
   text: string;
-  variant: "primary" | "secondary";
+  variant?: "primary" | "secondary";
   fullWidth?: boolean;
 }
 
-export const Button = ({ text, variant, fullWidth }: Props) => {
+export const Button = ({ text, variant = "primary", fullWidth }: Props) => {
   const getButtonStyle = () => {
     if (variant === "primary") {
       return {
@@ -60,8 +60,7 @@ export const Button = ({ text, variant, fullWidth }: Props) => {
         width: fullWidth ? "100%" : "auto",
         textTransform: "uppercase",
         letterSpacing: "2px",
-        transition: "background-color 0.5s, color 0.5s", // Add transition property
-
+        transition: "background-color 0.5s, color 0.5s",
         ...getButtonStyle(),
       }}
       onMouseEnter={handleMouseEnter}

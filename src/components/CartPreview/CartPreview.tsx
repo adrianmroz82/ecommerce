@@ -39,7 +39,7 @@ export const CartPreview = ({ setCartActive }: Props) => {
         <Divider variant="thin" />
       </div>
       <div className={classes.button}>
-        <Button text="Clear" variant="primary" fullWidth />
+        <Button text="Clear" fullWidth />
       </div>
     </div>
   );
