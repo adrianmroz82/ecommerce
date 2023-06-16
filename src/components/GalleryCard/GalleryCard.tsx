@@ -1,11 +1,15 @@
+import { Button } from "../Button/Button";
 import classes from "./GalleryCard.module.scss";
 
 export const GalleryCard = () => {
   return (
-    <div>
+    <div className={classes.cardContainer}>
       <div className={classes.cardImageContainer}>
-        <img className={classes.cardImage} src="https://picsum.photos/200" alt="" />
-        {/* add bestseller tag */}
+        <div className={classes.cardBestSeller}>Bestseller</div>
+        <img className={classes.cardImage} src="https://picsum.photos/1500" alt="" />
+        <div className={classes.cardImageOverlayButton}>
+          <Button text="Add to cart" variant="secondary" fullWidth />
+        </div>
       </div>
       <div className={classes.textContainer}>
         <h5>People</h5>

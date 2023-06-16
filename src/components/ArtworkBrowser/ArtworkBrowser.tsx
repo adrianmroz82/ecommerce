@@ -3,14 +3,32 @@ import { Divider } from "../Divider/Divider";
 import { GalleryCard } from "../GalleryCard/GalleryCard";
 import { Pagination } from "../Pagination/Pagination";
 import classes from "./ArtworkBrowser.module.scss";
+import { ReactComponent as SortIcon } from "./../../assets/sort-icon.svg";
+import { ReactComponent as ArrowDown } from "./../../assets/arrow-down.svg";
 
 // TODO: GENERIC BREADCRUMBS COMPONENT
 
 const Sort = () => {
   return (
     <div className={classes.sort}>
-      <span className={classes.sortText}>Sort by</span>
-      <span className={classes.price}>Price</span>
+      <span
+        className={classes.sortText}
+        style={{
+          marginRight: "1rem",
+          fontSize: "1.3rem",
+        }}>
+        <SortIcon style={{ marginRight: "0.5rem" }} />
+        Sort By
+      </span>
+
+      <span
+        className={classes.price}
+        style={{
+          fontSize: "1.3rem",
+        }}>
+        Price
+        <ArrowDown style={{ marginLeft: "0.5rem" }} />
+      </span>
     </div>
   );
 };
@@ -54,15 +72,10 @@ export const ArtworkBrowser = () => {
           <Divider style={{ margin: "1rem 0" }} variant="thin" />
           <Filter items={priceFilterItems} header="Price range" />
         </div>
-        <div className={classes.cardsContainer}>
-          {renderCards(6)}
-          <div
-            style={{
-              margin: "0 auto",
-            }}>
-            <Pagination />
-          </div>
-        </div>
+        <div className={classes.cardsContainer}>{renderCards(6)}</div>
+      </div>
+      <div className={classes.paginationWrapper}>
+        <Pagination />
       </div>
     </>
   );
