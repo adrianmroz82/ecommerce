@@ -4,6 +4,8 @@ import { ReactComponent as ArrowRight } from "../../assets/arrow-right.svg";
 export const Pagination = () => {
   const standard = "#B4B4B4";
 
+  // TODO: marginBottom on mobile ~5rem?
+
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <ArrowLeft style={{ marginRight: "1rem" }} />
